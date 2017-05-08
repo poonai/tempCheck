@@ -1,1 +1,0 @@
-Search.setIndex({envversion:46,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{develop:0,home:0,instal:0,miscellan:0,tutori:0,welcom:0},titles:["&lt;no title&gt;"],titleterms:{}})
