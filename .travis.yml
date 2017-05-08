@@ -8,5 +8,5 @@ script:
 - sudo chmod +x ./generate.sh
 - sudo apt-get update
 - sudo pip install sphinx
-- sudo sphinx-quickstart -h
+- sudo ./generate.sh
 
