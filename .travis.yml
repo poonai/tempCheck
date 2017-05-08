@@ -7,5 +7,5 @@ script:
 - sudo wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
 - sudo chmod +x ./generate.sh
 - sudo apt-get install python-sphinx
-- sudo sphinx-quickstart -q -v 1 -a sch00lb0y -p yay
+- sudo sphinx-quickstart -h
 
