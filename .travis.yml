@@ -1,4 +1,4 @@
 dist: trusty
 sudo: required
 script: sudo apt-get install python-sphinx
-script: sudo apt-get curl
+script: sudo apt-get install curl
