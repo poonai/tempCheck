@@ -8,8 +8,8 @@ script:
 - sudo chmod +x ./generate.sh
 - sudo apt-get update
 - sudo pip install sphinx
-- sudo openssl aes-256-cbc -K $encrypted_29cf7fe7b2e3_key -iv $encrypted_29cf7fe7b2e3_iv -in id_rsa.enc -out id_rsa -d
-- sudo eval "$(ssh-agent -s)"
+- openssl aes-256-cbc -K $encrypted_29cf7fe7b2e3_key -iv $encrypted_29cf7fe7b2e3_iv -in id_rsa.enc -out id_rsa -d
+- eval "$(ssh-agent -s)"
 - sudo chmod 600 id_rsa
 - sudo ssh-add id_rsa
 - sudo ./generate.sh
