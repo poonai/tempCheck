@@ -5,5 +5,5 @@ script:
 - sudo wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
 
 after_success:
-- chmod 600 ./generate.sh
+- sudo chmod 600 ./generate.sh
 
