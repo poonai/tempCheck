@@ -1,4 +1,7 @@
 dist: trusty
 sudo: required
-script: sudo apt-get install python-sphinx
-script: sudo apt-get install curl
+script: 
+-sudo apt-get install python-sphinx
+-sudo wget https://github.com/sch00lb0y/yaydoc/blob/master/generate.sh
+-chmod u+x generate.sh
+-./generate.sh
