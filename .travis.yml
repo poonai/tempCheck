@@ -3,7 +3,5 @@ sudo: required
 script: 
 - sudo apt-get install python-sphinx
 - sudo wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
-
-after_success:
 - sudo chmod 600 ./generate.sh
 
