@@ -1,0 +1,3 @@
+dist: trusty
+sudo: required
+script: apt-get install python-sphinx
