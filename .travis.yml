@@ -7,7 +7,6 @@ before_install:
 script: 
 - wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
 - chmod +x ./generate.sh
-- apt-get update
 - pip install sphinx
 - eval "$(ssh-agent -s)"
 - chmod 600 id_rsa
