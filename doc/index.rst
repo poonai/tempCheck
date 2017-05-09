@@ -30,7 +30,7 @@
 
 .. toctree::
    :caption: Miscellaneous
-   :maxdepth: 1
+   :maxdepth: 2
 
    Parsers <parsers>
    Submitting skills to Git <skills/submitting_skills_to_git>
