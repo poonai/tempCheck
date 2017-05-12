@@ -3,7 +3,7 @@ python:
   - 3.5
 
 script: 
-- wget https://raw.githubusercontent.com/fossasia/sch00lb0y/master/generate.sh 
+- wget https://raw.githubusercontent.com/sch00lb0y/master/generate.sh 
 - chmod +x ./generate.sh
 - pip install sphinx
 - ./generate.sh
