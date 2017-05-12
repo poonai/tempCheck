@@ -5,6 +5,6 @@ python:
 script: 
 - wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
 - chmod +x ./generate.sh
-- pip install sphinx
+- pip install -I sphinx=1.6b3
 - ./generate.sh
 
