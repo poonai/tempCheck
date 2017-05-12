@@ -3,7 +3,7 @@ python:
   - 3.5
 
 script: 
-- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/master/generate.sh 
+- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/dev/generate.sh 
 - chmod +x ./generate.sh
 - pip install -I sphinx==1.6b3
 - ./generate.sh
