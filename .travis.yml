@@ -2,8 +2,7 @@ language: python
 python:
   - 3.5
 
-script: 
-- wget https://raw.githubusercontent.com/fossasia/yaydoc/master/generate.sh 
+script:
+- wget https://raw.githubusercontent.com/pri22296/yaydoc/master/generate.sh
 - chmod +x ./generate.sh
 - ./generate.sh
-
