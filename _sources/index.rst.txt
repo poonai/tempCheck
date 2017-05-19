@@ -14,13 +14,13 @@
    Installation with Docker <installation/installation_docker>
    Installation on Cloud9 <installation/installation_cloud9>
    Installation on Heroku <installation/installation_heroku>
-   
+
 .. toctree::
    :caption: Tutorial
    :maxdepth: 1
-   
+
    AI Rule development Tutorial <skills/susi_skill_development_tutorial>
-   Ask SUSI <skills/susi_questions>
+   Asks SUSI <skills/susi_questions>
 
 .. toctree::
    :caption: Development

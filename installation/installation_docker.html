@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation of loklak with Docker on Bluemix &#8212; loklak 1 documentation</title>
+    <title>Installation of loklak with Docker on Bluemix &#8212; sd sd documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1',
+        VERSION:     'sd',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -43,7 +43,7 @@
   </head>
   <body role="document">
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar  navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -53,12 +53,15 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="../index.html">
-          loklak</a>
-        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+          Demo</a>
+        <span class="navbar-text navbar-version pull-left"><b>sd</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
+            
+                <li><a href="../examples.html">Examples</a></li>
+                <li><a href="http://example.com">Link</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -75,7 +78,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Installation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="installation_generic.html">Installation on Linux/Mac OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_generic.html">Installation on Linux/Mac OS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#build">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#run">Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#operate">Operate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_generic.html#shut-down">Shut down</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#download">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#build-and-run">Build and Run</a></li>
@@ -87,7 +98,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../skills/susi_questions.html">Ask SUSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skills/susi_questions.html">Asks SUSI</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
@@ -98,7 +109,11 @@
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../parsers.html">Parsers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../skills/submitting_skills_to_git.html">Submitting skills to Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skills/submitting_skills_to_git.html">Submitting skills to Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../skills/submitting_skills_to_git.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skills/submitting_skills_to_git.html#write-easy-dialog-ezd-conversation-rules">Write Easy Dialog (&#8220;EzD&#8221;) conversation rules</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -134,11 +149,7 @@
             
             
             
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/installation/installation_docker.md.txt"
-     rel="nofollow">Source</a>
-</div></li>
+              <li class="hidden-sm"></li>
             
           </ul>
 
@@ -158,7 +169,21 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Installation of loklak with Docker on Bluemix</a></li>
+</ul>
+
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content" style="margin-top:3%;">
       
   <div class="section" id="installation-of-loklak-with-docker-on-bluemix">
 <span id="installation-of-loklak-with-docker-on-bluemix"></span><h1>Installation of loklak with Docker on Bluemix<a class="headerlink" href="#installation-of-loklak-with-docker-on-bluemix" title="Permalink to this headline">¶</a></h1>
@@ -252,7 +277,7 @@ cf ic login   (No credentials are necessary of you logged in to bluemix before</
 				<div class="container">
 					<div class="row ui-sortable">
 						<div class="col-sm-3">
-							<span class="text-white">© Copyright 2016 Creative Commons By License. FOSSASIA.</span>
+							<span class="text-white">© Copyright 2016 Creative Commons By License. FOSSASIA CodeHeat.</span>
 						</div>
 
 						<div class="col-sm-9 text-right">
