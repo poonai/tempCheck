@@ -1,21 +1,36 @@
-.. balaji documentation master file, created by
-   sphinx-quickstart on Fri May 12 21:39:17 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to balaji's documentation!
-==================================
-
-Contents:
+.. mdinclude:: ../README.md
 
 .. toctree::
-   :maxdepth: 2
+   :caption: Home
 
+   Welcome <self>
 
+.. toctree::
+   :caption: Installation
+   :maxdepth: 1
 
-Indices and tables
-==================
+   Installation on Linux/Mac OS <installation/installation_generic>
+   Installation on Windows <installation/installation_windows_generic>
+   Installation with Docker <installation/installation_docker>
+   Installation on Cloud9 <installation/installation_cloud9>
+   Installation on Heroku <installation/installation_heroku>
+   
+.. toctree::
+   :caption: Tutorial
+   :maxdepth: 1
+   
+   AI Rule development Tutorial <skills/susi_skill_development_tutorial>
+   Ask SUSI <skills/susi_questions>
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :caption: Development
+   :maxdepth: 1
+
+   Setup Eclipse <installation/eclipseSetup>
+
+.. toctree::
+   :caption: Miscellaneous
+   :maxdepth: 1
+
+   Parsers <parsers>
+   Submitting skills to Git <skills/submitting_skills_to_git>

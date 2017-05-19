@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation of loklak with Docker on DigitalOcean &#8212; tat 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          tat</a>
+        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_generic.html">Installation on Linux/Mac OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#download">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#build-and-run">Build and Run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#operate">Operate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#shut-down">Shut down</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_docker.html">Installation with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_cloud9.html">Installation on Cloud9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_heroku.html">Installation on Heroku</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../skills/susi_questions.html">Ask SUSI</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html">How to setup Susi Server on Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html#using-the-ant-file">Using the Ant File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html#test">Test :</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../parsers.html">Parsers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skills/submitting_skills_to_git.html">Submitting skills to Git</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation of loklak with Docker on DigitalOcean</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/installation/installation_docker_digitalocean.md.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="installation-of-loklak-with-docker-on-digitalocean">
+<span id="installation-of-loklak-with-docker-on-digitalocean"></span><h1>Installation of loklak with Docker on DigitalOcean<a class="headerlink" href="#installation-of-loklak-with-docker-on-digitalocean" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.digitalocean.com">DigitalOcean</a> - simple cloud hosting, built for developers.</p>
+<ol>
+<li><p class="first">Register in <a class="reference external" href="https://www.digitalocean.com">DigitalOcean</a> and get 10$ credit.</p>
+</li>
+<li><p class="first">Click &#8216;Create droplet&#8217; button, choose your droplet image (Docker), size, location and add your SSH keys.</p>
+<p><img alt="Droplet image" src="http://i.imgur.com/wXXvg7W.png" /></p>
+<p><img alt="SSH keys" src="http://i.imgur.com/egW1HsV.png" /></p>
+</li>
+<li><p class="first">Click &#8216;Create&#8217;, wait a minute, copy ip of your new droplet and login to it using SSH:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh root@YOUR.DROPLET.IP
+</pre></div>
+</div>
+</li>
+<li><p class="first">Docker is already installed, you can check it using <code class="docutils literal"><span class="pre">docker</span> <span class="pre">version</span></code> command. You should see something like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@sevazhidkov</span><span class="p">:</span><span class="o">~</span><span class="c1"># docker version</span>
+<span class="n">Client</span><span class="p">:</span>
+ <span class="n">Version</span><span class="p">:</span>      <span class="mf">1.9</span><span class="o">.</span><span class="mi">1</span>
+ <span class="n">API</span> <span class="n">version</span><span class="p">:</span>  <span class="mf">1.21</span>
+ <span class="n">Go</span> <span class="n">version</span><span class="p">:</span>   <span class="n">go1</span><span class="o">.</span><span class="mf">4.2</span>
+ <span class="n">Git</span> <span class="n">commit</span><span class="p">:</span>   <span class="n">a34a1d5</span>
+ <span class="n">Built</span><span class="p">:</span>        <span class="n">Fri</span> <span class="n">Nov</span> <span class="mi">20</span> <span class="mi">13</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span> <span class="mi">2015</span>
+ <span class="n">OS</span><span class="o">/</span><span class="n">Arch</span><span class="p">:</span>      <span class="n">linux</span><span class="o">/</span><span class="n">amd64</span>
+
+<span class="n">Server</span><span class="p">:</span>
+ <span class="n">Version</span><span class="p">:</span>      <span class="mf">1.9</span><span class="o">.</span><span class="mi">1</span>
+ <span class="n">API</span> <span class="n">version</span><span class="p">:</span>  <span class="mf">1.21</span>
+ <span class="n">Go</span> <span class="n">version</span><span class="p">:</span>   <span class="n">go1</span><span class="o">.</span><span class="mf">4.2</span>
+ <span class="n">Git</span> <span class="n">commit</span><span class="p">:</span>   <span class="n">a34a1d5</span>
+ <span class="n">Built</span><span class="p">:</span>        <span class="n">Fri</span> <span class="n">Nov</span> <span class="mi">20</span> <span class="mi">13</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span> <span class="mi">2015</span>
+ <span class="n">OS</span><span class="o">/</span><span class="n">Arch</span><span class="p">:</span>      <span class="n">linux</span><span class="o">/</span><span class="n">amd64</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Pull Docker image from <a class="reference external" href="https://hub.docker.com/r/mariobehling/loklak/">Loklak repository</a> in Docker Hub (it should take about a minute):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>docker pull mariobehling/loklak
+</pre></div>
+</div>
+</li>
+<li><p class="first">OK, you&#8217;re ready to run Loklak:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">80</span>:80 -p <span class="m">443</span>:443 mariobehling/loklak:latest
+</pre></div>
+</div>
+</li>
+<li><p class="first">Go to your droplet IP using web browser. You should see Loklak main page.</p>
+</li>
+</ol>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+  <div class="footer-container">
+			<footer class="short footer">
+				<div class="container">
+					<div class="row ui-sortable">
+						<div class="col-sm-3">
+							<span class="text-white">© Copyright 2016 Creative Commons By License. FOSSASIA CodeHeat.</span>
+						</div>
+
+						<div class="col-sm-9 text-right">
+							<ul class="menu">
+								<li><a href="http://fossasia.org" target="_self">FOSSASIA</a></li>
+								<li><a href="https://github.com/fossasia" target="_self">GitHub</a></li>
+								<li><a href="#about" class="inner-link" target="_self">About</a></li>
+								<li><a href="mailto:contact@fossasia.org" target="_self">Contact</a></li>
+								<li><a href="http://blog.fossasia.org/tag/codeheat/" target="_self">Blog</a></li>
+								<li><a class="inner-link back-to-top" href="#top">Back To Top&nbsp;<i class="icon pe-7s-angle-up-circle"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+		</div>
+</footer>
+  </body>
+</html>

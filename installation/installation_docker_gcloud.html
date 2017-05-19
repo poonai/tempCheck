@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation of loklak with Docker on Google Cloud &#8212; tat 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          tat</a>
+        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_generic.html">Installation on Linux/Mac OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#download">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#build-and-run">Build and Run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#operate">Operate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows_generic.html#shut-down">Shut down</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_docker.html">Installation with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_cloud9.html">Installation on Cloud9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_heroku.html">Installation on Heroku</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../skills/susi_questions.html">Ask SUSI</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html">How to setup Susi Server on Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html#using-the-ant-file">Using the Ant File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eclipseSetup.html#test">Test :</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../parsers.html">Parsers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skills/submitting_skills_to_git.html">Submitting skills to Git</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation of loklak with Docker on Google Cloud</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/installation/installation_docker_gcloud.md.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="installation-of-loklak-with-docker-on-google-cloud">
+<span id="installation-of-loklak-with-docker-on-google-cloud"></span><h1>Installation of loklak with Docker on Google Cloud<a class="headerlink" href="#installation-of-loklak-with-docker-on-google-cloud" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li>Go to <a class="reference external" href="https://cloud.google.com/free-trial/">Google Cloud Free Trial</a> and sign up. You will get 300 dollars credit for 3 months.</li>
+</ol>
+<ol class="simple">
+<li>Go to the console page: <a class="reference external" href="https://console.cloud.google.com/home">Console</a></li>
+</ol>
+<ol class="simple">
+<li>If you don’t have any projects, a page that would guide you on how to start a project will pop up. Give your project a name.</li>
+</ol>
+<ol class="simple">
+<li>In the search bar above on console page, enter &#8216;Compute Engine&#8217; and click on <code class="docutils literal"><span class="pre">Compute</span> <span class="pre">Engine</span></code>.</li>
+</ol>
+<ol class="simple">
+<li>If you have not activated billing for compute engine, click enable billing and choose your account to activate your Compute Engine. Your Google Compute Engine should be activated within a few minutes.</li>
+</ol>
+<ol>
+<li><p class="first">Click <code class="docutils literal"><span class="pre">Create</span> <span class="pre">instance</span></code> to create an instance. In machine type, choose <code class="docutils literal"><span class="pre">small(1</span> <span class="pre">shared</span> <span class="pre">vCPU)</span></code>.
+Choose whatever zone you like.</p>
+<p>In Boot Disk, choose <code class="docutils literal"><span class="pre">Ubuntu</span> <span class="pre">14.04</span></code>, and the disk size should be larger than 40GB.
+On the bottom of the page, click <code class="docutils literal"><span class="pre">Management,</span> <span class="pre">disk,</span> <span class="pre">networking,</span> <span class="pre">access</span> <span class="pre">&amp;</span> <span class="pre">security</span> <span class="pre">options</span></code> to show more options. Inside of this, click into the tab <code class="docutils literal"><span class="pre">Networking</span></code> and choose <code class="docutils literal"><span class="pre">New</span> <span class="pre">static</span> <span class="pre">IP</span></code> instead of <code class="docutils literal"><span class="pre">Ephemeral</span></code>. Enter a name for your IP. Google will assign a IP for you.
+Check the two boxes <code class="docutils literal"><span class="pre">Allow</span> <span class="pre">HTTP</span> <span class="pre">traffic</span></code> and <code class="docutils literal"><span class="pre">Allow</span> <span class="pre">HTTPS</span> <span class="pre">traffic</span></code>. Finally, click <code class="docutils literal"><span class="pre">Create</span></code> to create an instance. Wait a few minutes for the creation to complete.</p>
+</li>
+</ol>
+<ol class="simple">
+<li>Once the creation has finished, click ssh below to establish web ssh connections.</li>
+<li>In the Web Console, enter:</li>
+</ol>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">docker</span><span class="o">.</span><span class="n">io</span>
+<span class="n">sudo</span> <span class="n">fallocate</span> <span class="o">-</span><span class="n">l</span> <span class="mi">4</span><span class="n">G</span> <span class="o">/</span><span class="n">swapfile</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">600</span> <span class="o">/</span><span class="n">swapfile</span>
+<span class="n">sudo</span> <span class="n">mkswap</span> <span class="o">/</span><span class="n">swapfile</span>
+<span class="n">sudo</span> <span class="n">swapon</span> <span class="o">/</span><span class="n">swapfile</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">build</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">loklak</span><span class="o">/</span><span class="n">loklak_server</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Once finished, the last line will provide the image ID, like <code class="docutils literal"><span class="pre">Successfully</span> <span class="pre">built</span> <span class="pre">4e11208a7b34</span></code>. Copy or remember this id, we will need this id to tag the image.
+Tag your image by entering <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">tag</span> <span class="pre">YOUR_IMAGE_ID</span> <span class="pre">loklak</span></code>. In my case, we enter <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">tag</span> <span class="pre">4e11208a7b34</span> <span class="pre">loklak</span></code>
+Run our server by entering:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span> <span class="o">-</span><span class="n">p</span> <span class="mi">443</span><span class="p">:</span><span class="mi">443</span> <span class="n">loklak</span>
+</pre></div>
+</div>
+<p>Enter your assigned IP address into your browser to check if it is working.</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+  <div class="footer-container">
+			<footer class="short footer">
+				<div class="container">
+					<div class="row ui-sortable">
+						<div class="col-sm-3">
+							<span class="text-white">© Copyright 2016 Creative Commons By License. FOSSASIA CodeHeat.</span>
+						</div>
+
+						<div class="col-sm-9 text-right">
+							<ul class="menu">
+								<li><a href="http://fossasia.org" target="_self">FOSSASIA</a></li>
+								<li><a href="https://github.com/fossasia" target="_self">GitHub</a></li>
+								<li><a href="#about" class="inner-link" target="_self">About</a></li>
+								<li><a href="mailto:contact@fossasia.org" target="_self">Contact</a></li>
+								<li><a href="http://blog.fossasia.org/tag/codeheat/" target="_self">Blog</a></li>
+								<li><a class="inner-link back-to-top" href="#top">Back To Top&nbsp;<i class="icon pe-7s-angle-up-circle"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+		</div>
+</footer>
+  </body>
+</html>
