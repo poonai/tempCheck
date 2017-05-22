@@ -3,6 +3,6 @@ python:
   - 3.5
 
 script:
-- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/dev/generate.sh
+- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/fossasia/generate.sh
 - chmod +x ./generate.sh
 - ./generate.sh
