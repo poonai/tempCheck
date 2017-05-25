@@ -176,3 +176,6 @@ footer.classic .social-profiles {
 .menu li a:hover {
   border-bottom: 2px solid #fff;
 }
+div.container:nth-child(2){
+  min-height: 80vh;
+}
