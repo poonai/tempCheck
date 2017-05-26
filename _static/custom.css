@@ -2,6 +2,7 @@ body{
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #fff;
   color: #777;
+  margin-bottom: 60px;
 }
 .navbar-default{
   background: #333;
@@ -176,6 +177,10 @@ footer.classic .social-profiles {
 .menu li a:hover {
   border-bottom: 2px solid #fff;
 }
-div.container:nth-child(2){
-  min-height: 80vh;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
