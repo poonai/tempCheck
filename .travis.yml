@@ -3,6 +3,7 @@ python:
   - 3.5
 
 script:
+- apt install pandoc
 - wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/pathfix/generate.sh
 - chmod +x ./generate.sh
 - ./generate.sh
