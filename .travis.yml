@@ -4,6 +4,6 @@ python:
 
 script:
 - apt install pandoc
-- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/pathfix/generate.sh
-- chmod +x ./generate.sh
+- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/script/generate_ci.sh
+- chmod +x ./generate_ci.sh
 - ./generate.sh
