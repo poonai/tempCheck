@@ -1,29 +1,5 @@
 .. toctree::
    :maxdepth: 1
-   :caption: Tempcheck Temp
-
-   tempCheck_temp/README
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Doc
-
-   tempCheck_temp/doc/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Docs
-
-   tempCheck_temp/docs/demo
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Docs
-
-   StockiumAI_temp/docs/demo
-
-.. toctree::
-   :maxdepth: 1
    :caption: Tempcheck
 
    tempCheck/demo
