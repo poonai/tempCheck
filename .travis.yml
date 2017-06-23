@@ -3,7 +3,6 @@ python:
   - 3.5
 
 script:
-- apt install pandoc
 - wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/script/generate_ci.sh
 - chmod +x ./generate_ci.sh
-- ./generate_ci.sh -s https://github.com/sch00lb0y/tempCheck
+- ./generate_ci.sh -s https://github.com/sch00lb0y/tempCheck,http://github.com/sch00lb0y/StockiumAI
