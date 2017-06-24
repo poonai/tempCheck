@@ -2,7 +2,7 @@
    :maxdepth: 1
    :caption: Tempcheck
 
-   tempCheck/index
+   tempCheck/demo
 
 .. toctree::
    :maxdepth: 1
