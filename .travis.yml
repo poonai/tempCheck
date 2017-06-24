@@ -1,4 +1,4 @@
 script:
 - wget https://raw.githubusercontent.com/fossasia/yaydoc/master/generate_ci.sh
-- chmod +x ./generate.sh
-- ./generate.sh
+- chmod +x ./generate_ci.sh
+- ./generate_ci.sh
