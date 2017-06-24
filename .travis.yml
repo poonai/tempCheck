@@ -1,3 +1,4 @@
+language: python
 script:
 - wget https://raw.githubusercontent.com/fossasia/yaydoc/master/generate_ci.sh
 - chmod +x ./generate_ci.sh
