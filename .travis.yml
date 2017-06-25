@@ -1,8 +1,4 @@
 language: python
-python:
-  - 3.5
-
-script:
-- wget https://raw.githubusercontent.com/sch00lb0y/yaydoc/script/multiple_generate.sh
-- chmod +x ./multiple_generate.sh
-- ./multiple_generate.sh -s https://github.com/sch00lb0y/tempCheck,http://github.com/sch00lb0y/StockiumAI
+ script:
+ - wget https://raw.githubusercontent.com/fossasia/yaydoc/master/generate_ci.sh
+ - chmod +x ./generate_ci.sh
