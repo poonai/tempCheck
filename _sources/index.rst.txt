@@ -1,0 +1,11 @@
+.. toctree::
+   :maxdepth: 1
+   :caption: Tempcheck
+
+   tempCheck/demo
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Stockiumai
+
+   StockiumAI/demo
