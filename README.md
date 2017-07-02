@@ -18,7 +18,7 @@ loklak is a server application which is able to collect messages from various so
 
 Please join our mailing lit to discuss questions regarding the project: https://groups.google.com/forum/#!forum/opntec-dev
 
-Our chat channel is on gitter here: https://gitter.im/loklak/loklak
+Our chat channel is on gitter hee: https://gitter.im/loklak/loklak
 
 ## Why should I use loklak?
 
