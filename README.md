@@ -14,7 +14,7 @@ loklak is a server application which is able to collect messages from various so
 
 'Lok Lak' is also a very tasty Cambodian stir-fry meat dish (usually beef) with a LOT of fresh black pepper. If you ever have the chance to eat Bee Lok Lak, please try it. I hope not to scare vegetarians with this name, currently I am one as well.
 
-## Communication
+## Communicatio
 
 Please join our mailing lit to discuss questions regarding the project: https://groups.google.com/forum/#!forum/opntec-dev
 
