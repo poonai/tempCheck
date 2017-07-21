@@ -1,4 +1,4 @@
 build:
   subproject:
-    - url: http://github.com/sch00lb0y/susi_server
+    - url: https://github.com/sch00lb0y/StockiumAi
     
