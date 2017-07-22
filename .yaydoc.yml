@@ -1,4 +1,1 @@
-build:
-  subproject:
-    - url: https://github.com/sch00lb0y/StockiumAi
-    
+
