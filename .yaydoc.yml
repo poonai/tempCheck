@@ -1,5 +1,3 @@
 social:
   twitter: fossasia
-build:
-  subproject:
-    - url: http://github.com/sch00lb0y/StockiumAi
+
