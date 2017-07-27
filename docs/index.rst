@@ -1,1 +1,1 @@
-.. feed:: http://blog.fossasia.org/feed
+.. feed:: http://blog.fossasia.org/feed/
