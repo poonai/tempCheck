@@ -1,3 +1,10 @@
+### Endpoints
+```
+POST /generate
+```
+
+**Parameters `(x-www-form-urlencoded)` or `json`**
+
 | Parameter  | Description | Purpose |
 |---         |---          |---      |
 |name|(required) Name of the webapp   | Unique name of the webapp|
