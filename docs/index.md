@@ -1,7 +1,7 @@
 ## Requirements
 asd
 
-| Component  | Name Flavour | Minimum Version |
+| Component  |Flavour | Version |
 |---------   |---------     |------           |
 |  OS | Mac Windows Linux | Any |
 | Node.js | None  | v4.0 (or above) |
