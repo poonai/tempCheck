@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Communicatio &mdash; tempCheck Jul 28, 2017 documentation</title> 
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="_static/fossasia.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    './',
+      VERSION:     'Jul 28, 2017',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true,
+      SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>    
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top - 80
+            }, 1000, function() {
+              var $target = $(target);
+                $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      $('#back-to-top').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+  </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="StockiumAI/docs/index.html" />
+    <link rel="prev" title="loka" href="index.html" /> 
+  </head>
+  <body>
+    <div class="container-fluid main"> 
+  <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#"><img class="img-responsive" src="http://fossasia.org/img/fossasia-dark.png" style="width: 50%" /></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Docs</a></li>
+              <li><a href="http://blog.fossasia.org/">Blog</a></li>
+              <li><a href="http://fossasia.org/donate/">Donate</a></li>
+              <li><a href="http://blog.fossasia.org/contact/">Contact</a></li>
+              <li class="social-link hidden-md hidden-sm hidden-xs"><a href="https://twitter.com/fossasia"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li class="social-link hidden-md hidden-sm hidden-xs"><a href="https://facebook.com/fossasia"><i class="fa fa-facebook fa-lg"></i></a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+      <div class="container">
+        <div class="col-md-3 hidden-sm hidden-xs"> 
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Communicatio</a></li>
+<li><a class="reference internal" href="#event-website-outpu">1. Event Website Outpu</a></li>
+<li><a class="reference internal" href="#web-app-generator">2. Web App Generator</a><ul>
+<li><a class="reference internal" href="#components-and-technology">Components and Technology</a><ul>
+<li><a class="reference internal" href="#technologies-used">Technologies used</a></li>
+<li><a class="reference internal" href="#components-of-the-generator">Components of the Generator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#web-app-generator-test-installation">Web App Generator Test Installation</a></li>
+<li><a class="reference internal" href="#installation-deployment-of-the-web-app-generator">Installation/Deployment of the Web App Generator</a><ul>
+<li><a class="reference internal" href="#how-do-i-install-web-app-generator-on-a-server">How do I install Web App Generator on a Server</a></li>
+<li><a class="reference internal" href="#how-do-i-install-web-app-generator-on-my-local-machine">How do I install Web App Generator on my local machine</a></li>
+<li><a class="reference internal" href="#how-do-i-install-web-app-generator-on-google-cloud">How do I install Web App Generator on Google Cloud</a></li>
+<li><a class="reference internal" href="#how-do-i-install-web-app-generator-on-aws">How do I install Web App Generator on AWS</a></li>
+<li><a class="reference internal" href="#how-do-i-install-web-app-generator-on-digital-ocean">How do I install Web App Generator on Digital Ocean</a></li>
+<li><a class="reference internal" href="#how-do-i-deploy-web-app-generator-with-heroku">How do I deploy Web App Generator with Heroku</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-the-generator-web-form">Accessing the Generator Web Form</a></li>
+<li><a class="reference internal" href="#accessing-the-generator-via-rest-api">Accessing the Generator via REST API</a><ul>
+<li><a class="reference internal" href="#endpoints">Endpoints</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configurations">Configurations</a><ul>
+<li><a class="reference internal" href="#server-configs">Server Configs</a><ul>
+<li><a class="reference internal" href="#port">PORT</a></li>
+<li><a class="reference internal" href="#mailer">Mailer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upload">Upload</a></li>
+<li><a class="reference internal" href="#github-deploy">Github Deploy</a><ul>
+<li><a class="reference internal" href="#images">Images</a></li>
+<li><a class="reference internal" href="#audio">Audio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributions-bug-reports-feature-requests">Contributions, Bug Reports, Feature Requests</a></li>
+<li><a class="reference internal" href="#issue-and-branch-policy">Issue and Branch Policy</a></li>
+<li><a class="reference internal" href="#license">LICENSE</a></li>
+<li><a class="reference internal" href="#maintainers">Maintainers</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">loka</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="StockiumAI/docs/index.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/demo.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+    </div>
+  </div> 
+        </div>
+        <div class="document col-md-9"> <!-- Document -->
+          <div> <!-- Document Wrapper -->
+            <div class="body" role="main"> <!-- Body-->
+  <p><img alt="Open Event webapp" src="https://storage.googleapis.com/eventyay.com/assets/branding/webapp_branding.png" /></p>
+<p>The Open Event Web App project has two components a) an event website generator and b) the actual generated website output. The web generator application can generate event websites by getting data from event JSON files and binary media files, that are stored in a compressed zip file. You can also access the application through a REST API. Websites that are generated by the &#8220;web app generator&#8221; can be uploaded to any web location, e.g. on Github pages or any server (e.g. via ftp).</p>
+<p><a class="reference external" href="https://travis-ci.org/fossasia/open-event-webapp?branch=development"><img alt="Build Status" src="https://travis-ci.org/fossasia/open-event-webapp.svg?branch=development" /></a>
+<a class="reference external" href="http://opev-webgen-dev.herokuapp.com"><img alt="Heroku" src="https://heroku-badge.herokuapp.com/?app=opev-webgen-dev" /></a>
+<a class="reference external" href="https://david-dm.org/fossasia/open-event-webapp"><img alt="Dependencies" src="https://david-dm.org/fossasia/open-event-webapp.svg" /></a>
+<a class="reference external" href="https://www.codacy.com/app/dev_19/open-event-webapp?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=fossasia/open-event-webapp&amp;amp;utm_campaign=Badge_Grade"><img alt="Codacy Badge" src="https://api.codacy.com/project/badge/Grade/c5b7e2ca3e4640c9b38e2f3274072583" /></a>
+<a class="reference external" href="https://codeclimate.com/github/fossasia/open-event-webapp"><img alt="Code Climate" src="https://codeclimate.com/github/fossasia/open-event-webapp/badges/gpa.svg?branch=development" /></a>
+<a class="reference external" href="https://codecov.io/gh/fossasia/open-event-webapp"><img alt="codecov" src="https://codecov.io/gh/fossasia/open-event-webapp/branch/development/graph/badge.svg" /></a>
+<a class="reference external" href="https://gitter.im/fossasia/open-event-webapp?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Gitter" src="https://badges.gitter.im/Join%20Chat.svg" /></a></p>
+<div class="section" id="communicatio">
+<span id="communicatio"></span><h1>Communicatio<a class="headerlink" href="#communicatio" title="Permalink to this headline">¶</a></h1>
+<p>Please join our mailing list to discuss questions regarding the project: https://groups.google.com/forum/#!forum/open-event</p>
+<p>Our chat channel is on gitter here: https://gitter.im/fossasia/open-event-webapp</p>
+</div>
+<div class="section" id="event-website-outpu">
+<span id="event-website-outpu"></span><h1>1. Event Website Outpu<a class="headerlink" href="#event-website-outpu" title="Permalink to this headline">¶</a></h1>
+<p>The component that is generated from the web app is the event website. Several sample event sites using the <a class="reference external" href="https://github.com/fossasia/open-event/tree/master/sample">sample from the open-event repo</a> were generated, showcased on the main index page and added to this repo as a Github Pages site. You can have a look at showcase page on http://fossasia.github.io/open-event-webapp/ We also have a custom domain at http://sched.eventyay.com to which the former link is redirected.</p>
+</div>
+<div class="section" id="web-app-generator">
+<span id="web-app-generator"></span><h1>2. Web App Generator<a class="headerlink" href="#web-app-generator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="components-and-technology">
+<span id="components-and-technology"></span><h2>Components and Technology<a class="headerlink" href="#components-and-technology" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="technologies-used">
+<span id="technologies-used"></span><h3>Technologies used<a class="headerlink" href="#technologies-used" title="Permalink to this headline">¶</a></h3>
+<p>The webapp generator uses the following technologies -</p>
+<ol class="simple">
+<li>HTML/CSS/Javascript based frontend</li>
+<li><a class="reference external" href="http://sass-lang.com/">SASS</a> - SASS to write optimized CSS.</li>
+<li><a class="reference external" href="http://nodejs.org">Node.js</a> - Javascript for the generator backend</li>
+<li><a class="reference external" href="http://expressjs.com">Express.js</a> - Server framework</li>
+<li><a class="reference external" href="http://handlebarsjs.com">Handelbars</a> - Template for rendering</li>
+<li><a class="reference external" href="http://socket.io">Socket.io</a> - For handling multi-user client, with progress of upload/generation</li>
+<li><a class="reference external" href="https://www.npmjs.com/package/selenium-webdriver">WebdriverJs</a> - Official Javascript Implementation of Selenium for testing generated event websites</li>
+</ol>
+</div>
+<div class="section" id="components-of-the-generator">
+<span id="components-of-the-generator"></span><h3>Components of the Generator<a class="headerlink" href="#components-of-the-generator" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Webform</li>
+</ol>
+<p>The source of the webform can be found <a class="reference external" href="../../../../../../../../src/www">here</a>. It consists of -</p>
+<ul class="simple">
+<li><a class="reference external" href="../../../../../../../../src/www/index.html">index.html</a> - The webform page</li>
+<li><a class="reference external" href="../../../../../../../../src/www/js/form.js">form.js</a> - The script that uploads the zips, and starts the generator process</li>
+</ul>
+<ol class="simple">
+<li>Generator</li>
+</ol>
+<p>The generator runs on a ExpressJS server, using this main <a class="reference external" href="../../../../../../../../src/app.js">app script</a>.</p>
+<ol class="simple">
+<li>Scripts</li>
+</ol>
+<ul class="simple">
+<li><a class="reference external" href="../../../../../../../../src/backend/generator.js">generator.js</a> - Does the main generation tasks, and controls other scripts</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/fold.js">fold.js</a> - Groups data of sessions, speakers, tracks etc from JSONs</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/dist.js">dist.js</a> - Creates folders, cleans folders, unzips/zips packages</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/ftpdeploy.js">ftpdeploy.js</a> - Deploys finished website to organiser&#8217;s server (optional)</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/mailer.js">mailer.js</a> - Sends mail to organiser notifying of successful creation</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/buildlogger.js">buildlogger.js</a> - Displays build logs while generating webapp</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/deploy.js">deploy.js</a> - Automatically deploys generated event sites to user&#8217;s github account</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/gulpfile.js">gulpfile.js</a> - Creates minified js and css for generated webapp</li>
+</ul>
+<ol class="simple">
+<li>Templates</li>
+</ol>
+<p>The HTML pages of the generated website are created using Handelbars templates. You can find all the templates <a class="reference external" href="../../../../../../../../src/backend/templates">here</a> -</p>
+<ul class="simple">
+<li><strong>footer.hbs</strong> : Common template for footer on all pages</li>
+<li><strong>navbar.hbs</strong> : Common template for navbar on all pages</li>
+<li><strong>event.hbs</strong> : index.html - Home page</li>
+<li><strong>rooms.hbs</strong> : rooms.html - Venues page</li>
+<li><strong>schedule.hbs</strong> : tracks.html - Tracks page</li>
+<li><strong>speakers.hbs</strong> : speakers.html - Speakers page</li>
+<li><strong>session.hbs</strong> : session_id.html - Individual Session page having a particular id</li>
+</ul>
+<ol class="simple">
+<li>Selenium</li>
+</ol>
+<p>Contains scripts related to testing different pages of the generated website.</p>
+<ul class="simple">
+<li><a class="reference external" href="../../../../../../../../src/selenium/basePage.js">basePage.js</a> - Contains methods common to all the pages of the event site</li>
+<li><a class="reference external" href="../../../../../../../../src/selenium/eventPage.js">eventPage.js</a> - Contains methods for testing of the index page of the event</li>
+<li><a class="reference external" href="../../../../../../../../src/selenium/trackPage.js">trackPage.js</a> - Contains methods for testing of the tracks page of the event</li>
+</ul>
+<ol class="simple">
+<li>Overview Site</li>
+</ol>
+<p>Contains thumbnail images of sample events and main index.html file required for the <a class="reference external" href="http://sched.eventyay.com">showcase site</a></p>
+</div>
+</div>
+<div class="section" id="web-app-generator-test-installation">
+<span id="web-app-generator-test-installation"></span><h2>Web App Generator Test Installation<a class="headerlink" href="#web-app-generator-test-installation" title="Permalink to this headline">¶</a></h2>
+<p>You can try out the web generator at  https://opev-webgen.herokuapp.com</p>
+<p>The development version is available here: https://opev-webgen-dev.herokuapp.com</p>
+<p>You can use one of the event sample zip files here: https://github.com/fossasia/open-event/tree/master/sample</p>
+</div>
+<div class="section" id="installation-deployment-of-the-web-app-generator">
+<span id="installation-deployment-of-the-web-app-generator"></span><h2>Installation/Deployment of the Web App Generator<a class="headerlink" href="#installation-deployment-of-the-web-app-generator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-do-i-install-web-app-generator-on-a-server">
+<span id="how-do-i-install-web-app-generator-on-a-server"></span><h3>How do I install Web App Generator on a Server<a class="headerlink" href="#how-do-i-install-web-app-generator-on-a-server" title="Permalink to this headline">¶</a></h3>
+<p>Please check out <a class="reference external" href="../../../../../../../../docs/INSTALLATION.md">the documentation here</a>.</p>
+</div>
+<div class="section" id="how-do-i-install-web-app-generator-on-my-local-machine">
+<span id="how-do-i-install-web-app-generator-on-my-local-machine"></span><h3>How do I install Web App Generator on my local machine<a class="headerlink" href="#how-do-i-install-web-app-generator-on-my-local-machine" title="Permalink to this headline">¶</a></h3>
+<p>Please check out <a class="reference external" href="../../../../../../../../docs/INSTALLATION_LOCAL.md">the documentation here</a>.</p>
+</div>
+<div class="section" id="how-do-i-install-web-app-generator-on-google-cloud">
+<span id="how-do-i-install-web-app-generator-on-google-cloud"></span><h3>How do I install Web App Generator on Google Cloud<a class="headerlink" href="#how-do-i-install-web-app-generator-on-google-cloud" title="Permalink to this headline">¶</a></h3>
+<p>To install the system on Google Cloud please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_GOOGLE.md">Google Cloud installation readme</a>.</p>
+</div>
+<div class="section" id="how-do-i-install-web-app-generator-on-aws">
+<span id="how-do-i-install-web-app-generator-on-aws"></span><h3>How do I install Web App Generator on AWS<a class="headerlink" href="#how-do-i-install-web-app-generator-on-aws" title="Permalink to this headline">¶</a></h3>
+<p>To install the system on AWS please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_AWS.md">AWS installation readme</a>.</p>
+</div>
+<div class="section" id="how-do-i-install-web-app-generator-on-digital-ocean">
+<span id="how-do-i-install-web-app-generator-on-digital-ocean"></span><h3>How do I install Web App Generator on Digital Ocean<a class="headerlink" href="#how-do-i-install-web-app-generator-on-digital-ocean" title="Permalink to this headline">¶</a></h3>
+<p>To install the system on Digital Ocean please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_DIGITALOCEAN.md">Digital Ocean installation readme</a>.</p>
+</div>
+<div class="section" id="how-do-i-deploy-web-app-generator-with-heroku">
+<span id="how-do-i-deploy-web-app-generator-with-heroku"></span><h3>How do I deploy Web App Generator with Heroku<a class="headerlink" href="#how-do-i-deploy-web-app-generator-with-heroku" title="Permalink to this headline">¶</a></h3>
+<p>Please read how to deploy to <a class="reference external" href="../../../../../../../../docs/INSTALLATION_HEROKU.md">Heroku here</a>Or use the 1-click deployment button<a class="reference external" href="https://heroku.com/deploy?template=https://github.com/fossasia/open-event-webapp/tree/development"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-the-generator-web-form">
+<span id="accessing-the-generator-web-form"></span><h1>Accessing the Generator Web Form<a class="headerlink" href="#accessing-the-generator-web-form" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Once deployed, you&#8217;ll find the generator running on http://localhost:5000, it should look like this</li>
+</ul>
+<p><img alt="Generator Screencast" src="docs/screenshots/project.gif" /></p>
+<ul class="simple">
+<li>Add your <strong>email id</strong>, select <strong>session style</strong> (single page for each session or expandable sessions),</li>
+<li>Then upload the zip file that contains all JSON files for <em>speakers</em>, <em>sessions</em>, <em>sponsors</em>, <em>event</em>, <em>tracks</em> and <em>locations</em> (These you should get from an orga-server or through the API after you have created your event there).</li>
+<li>Now, when you click on <strong>GENERATE APP and DOWNLOAD</strong> button, you&#8217;ll get to download a zip of the event website. You can also deploy the web site to your Github Pages by clicking on <strong>DEPLOY</strong> button.</li>
+</ul>
+</div>
+<div class="section" id="accessing-the-generator-via-rest-api">
+<span id="accessing-the-generator-via-rest-api"></span><h1>Accessing the Generator via REST API<a class="headerlink" href="#accessing-the-generator-via-rest-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="endpoints">
+<span id="endpoints"></span><h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">generate</span>
+</pre></div>
+</div>
+<p><strong>Parameters <code class="docutils literal"><span class="pre">(x-www-form-urlencoded)</span></code> or <code class="docutils literal"><span class="pre">json</span></code></strong></p>
+<p>| Parameter  | Description | Purpose |
+|&#8212;         |&#8212;          |&#8212;      |
+|name|(required) Name of the webapp   | Unique name of the webapp|
+|email|(required) Your email id | We will send a email to this when your webapp is ready|
+|datasource | (required) Either <code class="docutils literal"><span class="pre">jsonupload</span></code> or <code class="docutils literal"><span class="pre">eventapi</span></code> | |
+|apiendpoint| (if datasource = eventapi) API endpoint url | |</p>
+</div>
+</div>
+<div class="section" id="configurations">
+<span id="configurations"></span><h1>Configurations<a class="headerlink" href="#configurations" title="Permalink to this headline">¶</a></h1>
+<p>All configurations are saved in the <a class="reference external" href="../../../../../../../../config.json">config.js</a> file.</p>
+<p>NOTE: In this document all <code class="docutils literal"><span class="pre">config.&lt;obj&gt;</span></code> variables refer to the data in the <em>config.json</em> file.</p>
+<div class="section" id="server-configs">
+<span id="server-configs"></span><h2>Server Configs<a class="headerlink" href="#server-configs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="port">
+<span id="port"></span><h3>PORT<a class="headerlink" href="#port" title="Permalink to this headline">¶</a></h3>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">process.env.PORT</span></code> |(Can be described in shell env, or in Heroku type platforms)
+<code class="docutils literal"><span class="pre">config.PORT</span></code> |(Falls back to config file if above not found)</p>
+</div>
+<div class="section" id="mailer">
+<span id="mailer"></span><h3>Mailer<a class="headerlink" href="#mailer" title="Permalink to this headline">¶</a></h3>
+<p>We use Sendgrid to send mails, and you need a Sendgrid API to make it work. Additionally, you can also use SMTP to send mails if you don&#8217;t have Sendgrid Key.</p>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">process.env.SENDGRID_API_KEY</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.SENDGRID_API_KEY</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.SMTP_USERNAME</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.SMTP_USERNAME</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.SMTP_PASSWORD</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.SMTP_PASSWORD</span></code> | (Falls back to config file)</p>
+</div>
+</div>
+<div class="section" id="upload">
+<span id="upload"></span><h2>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
+<p>We use AWS S3 services for storing the zip file of the generated event. These zip files are automatically deleted after 3 days from the store. Each
+uploaded file has a unique download link. <code class="docutils literal"><span class="pre">node-uuid</span></code> module is used for generating the cryptic download link of the file.</p>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">process.env.AWS_BUCKET</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.AWS_BUCKET</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.AWS_ACCESS_KEY_ID</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.AWS_ACCESS_KEY_ID</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.AWS_SECRET_ACCESS_KEY</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.AWS_SECRET_ACCESS_KEY</span></code> | (Falls back to config file)</p>
+</div>
+<div class="section" id="github-deploy">
+<span id="github-deploy"></span><h2>Github Deploy<a class="headerlink" href="#github-deploy" title="Permalink to this headline">¶</a></h2>
+<p>The web-app is able to automatically deploy the generated event sites to Github Pages of a User. We use <code class="docutils literal"><span class="pre">passport</span></code> library for authentication of
+the user. For uploading and committing the event files, we use <code class="docutils literal"><span class="pre">github</span></code> library which provides a wrapper for the Github API in node.</p>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">process.env.GITHUB_CLIENT_ID</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.GITHUB_CLIENT_ID</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.GITHUB_CLIENT_SECRET</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.GITHUB_CLIENT_SECRET</span></code> | (Falls back to config file)
+<code class="docutils literal"><span class="pre">process.env.CALLBACK_URL</span></code> | (Tries to get from shell env first)
+<code class="docutils literal"><span class="pre">config.CALLBACK_URL</span></code> | (Falls back to config file)</p>
+<div class="section" id="images">
+<span id="images"></span><h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<p>We need to process all the speaker images and there are certain configs used -</p>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">config.speaker_images.MAX_WIDTH</span></code> |(Max needed height of speaker image)
+<code class="docutils literal"><span class="pre">config.speaker_images.MAX_HEIGHT</span></code> |(Max needed width of speaker image)
+<code class="docutils literal"><span class="pre">config.speaker_images.TRACK_HEIGHT_REM</span></code> |(Speaker image height, in CSS rem units, for tracks page)
+<code class="docutils literal"><span class="pre">config.speaker_images.TRACK_WIDTH_REM</span></code> |(Speaker image width, in CSS rem units, for tracks page)</p>
+</div>
+<div class="section" id="audio">
+<span id="audio"></span><h3>Audio<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h3>
+<p>Some sessions can have a recorded audio attached to them. The parameters for that are</p>
+<p>| Variable | Description |
+| &#8212;-     | &#8212;-        |
+<code class="docutils literal"><span class="pre">config.audio_files.MAX_SIZE_MB</span></code> | Max size of the audio (limited by Github file size)</p>
+</div>
+</div>
+</div>
+<div class="section" id="contributions-bug-reports-feature-requests">
+<span id="contributions-bug-reports-feature-requests"></span><h1>Contributions, Bug Reports, Feature Requests<a class="headerlink" href="#contributions-bug-reports-feature-requests" title="Permalink to this headline">¶</a></h1>
+<p>This is an Open Source project and we would be happy to see contributors who report bugs and file feature requests submitting pull requests as well. Please report issues here https://github.com/fossasia/open-event-webapp/issues</p>
+</div>
+<div class="section" id="issue-and-branch-policy">
+<span id="issue-and-branch-policy"></span><h1>Issue and Branch Policy<a class="headerlink" href="#issue-and-branch-policy" title="Permalink to this headline">¶</a></h1>
+<p>Before making a pull request, please file an issue. So, other developers have the chance to give feedback or discuss details. Match every pull request with an issue please and add the issue number in description e.g. like &#8220;Fixes #123&#8221;.</p>
+<p>We have the following branches</p>
+<ul class="simple">
+<li><strong>development</strong>All development goes on in this branch. If you&#8217;re making a contribution,
+you are supposed to make a pull request to <em>development</em>.
+PRs to master must pass a build check and a unit-test (<em>test/serverTest.js</em>) check on Travis</li>
+<li><strong>master</strong>This contains shipped code. After significant features/bugfixes are accumulated on development, we make a version update, and make a release.</li>
+</ul>
+</div>
+<div class="section" id="license">
+<span id="license"></span><h1>LICENSE<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
+<p>OpenEvent Webapp - A webapp and it&#8217;s generator, written under the FOSSASIA Open Event project. The Open Event project aims to make server and client software required for hosting events/conferences easy to build and configure. Copyright (C) 2016, FOSSASIA. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="maintainers">
+<span id="maintainers"></span><h1>Maintainers<a class="headerlink" href="#maintainers" title="Permalink to this headline">¶</a></h1>
+<p>The project is maintained by</p>
+<ul class="simple">
+<li>Arnav Gupta (<a class="reference external" href="https://github.com/championswimmer">&#64;championswimmer</a>)</li>
+<li>Aayush Arora (<a class="reference external" href="https://github.com/aayusharora">&#64;aayusharora</a>)</li>
+<li>Mario Behling (<a class="reference external" href="http://github.com/mariobehling">&#64;mariobehling</a>)</li>
+<li>Justin Lee (<a class="reference external" href="http://github.com/juslee">&#64;juslee</a>)</li>
+</ul>
+</div>
+
+
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="footer-container">
+        <footer role="contentinfo" class="footer">
+          <div class="container">
+            
+    <div class="row">
+      <div class="col-sm-2">
+        <ul class="menu">
+        <li><a target="_self" href="http://blog.fossasia.org">Blog</a></li>
+        <li><a target="_self" href="http://github.com/fossasia">Github</a></li>
+        <li><a target="_self" href="http://labs.fossasia.org/#projects">Projects</a></li>
+        <li><a target="_self" href="http://coc.fossasia.org/">Code of Conduct</a></li>
+        <li><a target="_self" href="./about">About</a></li>
+        <li><a target="_self" href="http://blog.fossasia.org/contact">Contact</a></li>
+        <li><a target="_self" href="./donate/">Donate</a></li>
+        <li><a class="inner-link" id="back-to-top" href="#top">Back To Top</a></li>
+      </ul>
+      </div>
+      <div class="col-sm-7">
+        <span class="lead color-heading">About FOSSASIA</span>
+      <p>
+FOSSASIA is the premier Free and Open Source technology organization in Asia for developers, designers, start-ups, and contributors. Projects at FOSSASIA range from open hardware, to design, graphics and software. FOSSASIA was established in 2009. The annual FOSSASIA Summit took place in Cambodia, Vietnam and Singapore. FOSSASIA meetup groups exist throughout Asia.</p>
+      </div>
+      <div class="col-sm-3">
+        <ul class="contact-methods">
+        <li><i class="fa fa-envelope fa-lg"></i><span><a id="mailAdd" href="mailto:fossasia@googlegroups.com" target="_self" style="color:#777777">&nbsp;fossasia@googlegroups.com</a></span></li>
+        <li><i class="fa fa-mobile fa-lg"></i><span>&nbsp;+65 83435672</span></li>
+        <li><i class="fa fa-map-marker fa-lg"></i><span>&nbsp;Ms. DANG Hong Phuc</span></li>
+        <li><span>FOSSASIA</span></li>
+        <li><span>Xoai Building, 93 Mau Than Street Xuan Khan, Ninh Kieu 9000 Can Tho, Vietnam</span></li>
+      </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+      <ul class="social-profiles">
+        <li><a target="_self" href="http://twitter.com/fossasia"><i class="fa fa-twitter"></i></a></li>
+        <li><a target="_self" href="http://facebook.com/fossasia"><i class="fa fa-facebook"></i></a></li>
+        <li><a target="_self" href="https://www.linkedin.com/groups/FOSSASIA-3762811"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a target="_self" href="https://www.youtube.com/channel/UCQprMsG-raCIMlBudm20iLQ"><i class="fa fa-youtube icon-large"></i></a></li>
+        <li><a target="_self" href="https://www.flickr.com/photos/fossasia"><i class="fa fa-flickr fa-lg"></i></a></li>
+        <li><a target="_self" href="https://www.instagram.com/explore/tags/fossasia/"><i class="fa fa-instagram"></i></a></li>
+        <li><a target="_self" href="https://github.com/fossasia"><i class="fa fa-github fa-lg"></i></a></li>
+      </ul>
+      </div>
+    </div>
+            <hr />
+            <div class="copy">
+                  &copy; 2017, sch00lb0y. All Rights Reserved.
+                Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
