@@ -1,1 +1,1 @@
-.. feed:: http://blog.fossasia.org/feed
+.. timeline:: fossasia
