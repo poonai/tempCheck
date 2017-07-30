@@ -1,4 +1,4 @@
-# yaydo
+# yayd
 [![Build Status](https://travis-ci.org/fossasia/yaydoc.svg?branch=master)](https://travis-ci.org/fossasia/yaydoc)
 [![Join the chat at https://gitter.im/fossasia/yaydoc](https://badges.gitter.im/fossasia/yaydoc.svg)](https://gitter.im/fossasia/yaydoc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -12,7 +12,7 @@
 
 **With environment variables**
 
-Set the following Environment Variables in Travis CI. [Guide](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)     
+Set the following Environmen Variables in Travis CI. [Guide](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)     
 
 | Environment Variable | Description                                       | Default / FORMAT  |
 |----------------------| ------------------------------------------------- |-------------------|
