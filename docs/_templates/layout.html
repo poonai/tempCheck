@@ -41,6 +41,29 @@
       <div class="page-content">
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--4-col">
+                 {%- if sidebars != None %}
+        {#- new style sidebar: explicitly include/exclude templates #}
+        {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+        {%- endfor %}
+      {%- else %}
+        {#- old style sidebars: using blocks -- should be deprecated #}
+        {%- block sidebarsearch %}
+        {%- include "searchbox.html" %}
+        {%- endblock %}
+        {%- block sidebartoc %}
+        {%- include "localtoc.html" %}
+        {%- endblock %}
+        {%- block sidebarrel %}
+        {%- include "relations.html" %}
+        {%- endblock %}
+        {%- block sidebarsourcelink %}
+        {%- include "sourcelink.html" %}
+        {%- endblock %}
+        {%- if customsidebar %}
+        {%- include customsidebar %}
+        {%- endif %}
+      {%- endif %}
           </div>
           <div class="mdl-cell mdl-cell--8-col">
             {%- block body %} {% endblock %}
