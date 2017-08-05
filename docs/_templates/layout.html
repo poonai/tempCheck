@@ -41,7 +41,9 @@
       <div class="page-content">
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--4-col">
-            {% block sidebar1 %}{{ sidebar() }}{% endblock %}
+                    {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+        {%- endfor %}
           </div>
           <div class="mdl-cell mdl-cell--8-col">
             {%- block body %} {% endblock %}
