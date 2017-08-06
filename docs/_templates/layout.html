@@ -3,7 +3,7 @@
   <head>
     <title>Hello!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto:300,400">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="_static/style.css"/>
   </head>
@@ -13,34 +13,29 @@
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">
-        <img src="susi-logo.png" class="_static/susi-logo"/>
+        <img src="_static/susi-logo.png" class="susi-logo"/>
       </span>
       <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link selected" href="">Overview</a>
-          <a class="mdl-navigation__link" href="">Devices</a>
-          <a class="mdl-navigation__link" href="">Blog</a>
-          <a class="mdl-navigation__link" href="">Team</a>
-          <a class="mdl-navigation__link" href="">Support</a>
+          <a class="mdl-navigation__link" href="http://blog.fossasia.org/?s=susi">Blog</a>
+          <a class="mdl-navigation__link" href="http://chat.susi.ai/team">Team</a>
+          <a class="mdl-navigation__link" href="http://chat.susi.ai/support">Support</a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Title</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Overview</a>
-        <a class="mdl-navigation__link" href="">Devices</a>
-        <a class="mdl-navigation__link" href="">Blog</a>
-        <a class="mdl-navigation__link" href="">Team</a>
-        <a class="mdl-navigation__link" href="">Support</a>
+        <a class="mdl-navigation__link" href="http://blog.fossasia.org/?s=susi">Blog</a>
+        <a class="mdl-navigation__link" href="http://chat.susi.ai/team">Team</a>
+        <a class="mdl-navigation__link" href="http://chat.susi.ai/support">Support</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
       <div class="page-content">
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
+          <div class="mdl-cell mdl-cell--3-col">
                  {%- if sidebars != None %}
         {#- new style sidebar: explicitly include/exclude templates #}
         {%- for sidebartemplate in sidebars %}
@@ -65,7 +60,7 @@
         {%- endif %}
       {%- endif %}
           </div>
-          <div class="mdl-cell mdl-cell--8-col">
+          <div class="mdl-cell mdl-cell--9-col">
             {%- block body %} {% endblock %}
           </div>
         </div>
@@ -78,16 +73,13 @@
           <img src="_static/susi-logo-footer.svg" class="footer-logo"/>
         </div>
         <ul class="mdl-mini-footer__link-list">
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Code</a></li>
+          <li><a href="http://blog.fossasia.org/?s=susi">Blog</a></li>
+          <li><a href="http://github.com/fossasia/susi_server">Code</a></li>
         </ul>
       </div>
       <div class="mdl-mini-footer__right-section">
         <ul class="mdl-mini-footer__link-list">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><a href="http://blog.fossasia.org/contact/">Contact</a></li>
         </ul>
       </div>
     </footer>
