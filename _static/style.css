@@ -1,0 +1,30 @@
+.susi-logo{
+  height: 25px;
+}
+
+.mdl-layout__header{
+  background: rgb(66, 133, 244);
+}
+
+.mdl-navigation a.selected{
+  border-bottom: 4px solid #fff;
+}
+
+.footer-logo{
+  height: 25px;
+  margin-right: 100px;
+}
+
+.right-float-footer{
+  float:right;
+}
+
+.mdl-mini-footer{
+  background: #f6f6f6;
+}
+
+footer a{
+  color:#000 !important;
+  font-size: 1em !important;
+  font-weight: 300 !important;
+}
