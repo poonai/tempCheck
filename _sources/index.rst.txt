@@ -5,9 +5,3 @@
    :caption: Contents
 
    demo
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Stockiumai
-
-   StockiumAI/docs/index

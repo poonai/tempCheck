@@ -48,7 +48,7 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Communicati</a></li>
+<li><a class="reference internal" href="#">Communicat</a></li>
 <li><a class="reference internal" href="#event-website-outp">1. Event Website Outp</a></li>
 <li><a class="reference internal" href="#web-app-generator">2. Web App Generator</a><ul>
 <li><a class="reference internal" href="#components-and-technology">Components and Technology</a><ul>
@@ -96,9 +96,6 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">loka</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="StockiumAI/docs/index.html"
-                        title="next chapter">&lt;no title&gt;</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -117,8 +114,8 @@
 <a class="reference external" href="https://codeclimate.com/github/fossasia/open-event-webapp"><img alt="Code Climate" src="https://codeclimate.com/github/fossasia/open-event-webapp/badges/gpa.svg?branch=development" /></a>
 <a class="reference external" href="https://codecov.io/gh/fossasia/open-event-webapp"><img alt="codecov" src="https://codecov.io/gh/fossasia/open-event-webapp/branch/development/graph/badge.svg" /></a>
 <a class="reference external" href="https://gitter.im/fossasia/open-event-webapp?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Gitter" src="https://badges.gitter.im/Join%20Chat.svg" /></a></p>
-<div class="section" id="communicati">
-<span id="communicati"></span><h1>Communicati<a class="headerlink" href="#communicati" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="communicat">
+<span id="communicat"></span><h1>Communicat<a class="headerlink" href="#communicat" title="Permalink to this headline">¶</a></h1>
 <p>Please join our mailing list to discuss questions regarding the project: https://groups.google.com/forum/#!forum/open-event</p>
 <p>Our chat channel is on gitter here: https://gitter.im/fossasia/open-event-webapp</p>
 </div>
@@ -148,32 +145,32 @@
 <ol class="simple">
 <li>Webform</li>
 </ol>
-<p>The source of the webform can be found <a class="reference external" href="../../../../../src/www">here</a>. It consists of -</p>
+<p>The source of the webform can be found <a class="reference external" href="../../../../../../../../src/www">here</a>. It consists of -</p>
 <ul class="simple">
-<li><a class="reference external" href="../../../../../src/www/index.html">index.html</a> - The webform page</li>
-<li><a class="reference external" href="../../../../../src/www/js/form.js">form.js</a> - The script that uploads the zips, and starts the generator process</li>
+<li><a class="reference external" href="../../../../../../../../src/www/index.html">index.html</a> - The webform page</li>
+<li><a class="reference external" href="../../../../../../../../src/www/js/form.js">form.js</a> - The script that uploads the zips, and starts the generator process</li>
 </ul>
 <ol class="simple">
 <li>Generator</li>
 </ol>
-<p>The generator runs on a ExpressJS server, using this main <a class="reference external" href="../../../../../src/app.js">app script</a>.</p>
+<p>The generator runs on a ExpressJS server, using this main <a class="reference external" href="../../../../../../../../src/app.js">app script</a>.</p>
 <ol class="simple">
 <li>Scripts</li>
 </ol>
 <ul class="simple">
-<li><a class="reference external" href="../../../../../src/backend/generator.js">generator.js</a> - Does the main generation tasks, and controls other scripts</li>
-<li><a class="reference external" href="../../../../../src/backend/fold.js">fold.js</a> - Groups data of sessions, speakers, tracks etc from JSONs</li>
-<li><a class="reference external" href="../../../../../src/backend/dist.js">dist.js</a> - Creates folders, cleans folders, unzips/zips packages</li>
-<li><a class="reference external" href="../../../../../src/backend/ftpdeploy.js">ftpdeploy.js</a> - Deploys finished website to organiser&#8217;s server (optional)</li>
-<li><a class="reference external" href="../../../../../src/backend/mailer.js">mailer.js</a> - Sends mail to organiser notifying of successful creation</li>
-<li><a class="reference external" href="../../../../../src/backend/buildlogger.js">buildlogger.js</a> - Displays build logs while generating webapp</li>
-<li><a class="reference external" href="../../../../../src/backend/deploy.js">deploy.js</a> - Automatically deploys generated event sites to user&#8217;s github account</li>
-<li><a class="reference external" href="../../../../../src/backend/gulpfile.js">gulpfile.js</a> - Creates minified js and css for generated webapp</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/generator.js">generator.js</a> - Does the main generation tasks, and controls other scripts</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/fold.js">fold.js</a> - Groups data of sessions, speakers, tracks etc from JSONs</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/dist.js">dist.js</a> - Creates folders, cleans folders, unzips/zips packages</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/ftpdeploy.js">ftpdeploy.js</a> - Deploys finished website to organiser&#8217;s server (optional)</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/mailer.js">mailer.js</a> - Sends mail to organiser notifying of successful creation</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/buildlogger.js">buildlogger.js</a> - Displays build logs while generating webapp</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/deploy.js">deploy.js</a> - Automatically deploys generated event sites to user&#8217;s github account</li>
+<li><a class="reference external" href="../../../../../../../../src/backend/gulpfile.js">gulpfile.js</a> - Creates minified js and css for generated webapp</li>
 </ul>
 <ol class="simple">
 <li>Templates</li>
 </ol>
-<p>The HTML pages of the generated website are created using Handelbars templates. You can find all the templates <a class="reference external" href="../../../../../src/backend/templates">here</a> -</p>
+<p>The HTML pages of the generated website are created using Handelbars templates. You can find all the templates <a class="reference external" href="../../../../../../../../src/backend/templates">here</a> -</p>
 <ul class="simple">
 <li><strong>footer.hbs</strong> : Common template for footer on all pages</li>
 <li><strong>navbar.hbs</strong> : Common template for navbar on all pages</li>
@@ -188,9 +185,9 @@
 </ol>
 <p>Contains scripts related to testing different pages of the generated website.</p>
 <ul class="simple">
-<li><a class="reference external" href="../../../../../src/selenium/basePage.js">basePage.js</a> - Contains methods common to all the pages of the event site</li>
-<li><a class="reference external" href="../../../../../src/selenium/eventPage.js">eventPage.js</a> - Contains methods for testing of the index page of the event</li>
-<li><a class="reference external" href="../../../../../src/selenium/trackPage.js">trackPage.js</a> - Contains methods for testing of the tracks page of the event</li>
+<li><a class="reference external" href="../../../../../../../../src/selenium/basePage.js">basePage.js</a> - Contains methods common to all the pages of the event site</li>
+<li><a class="reference external" href="../../../../../../../../src/selenium/eventPage.js">eventPage.js</a> - Contains methods for testing of the index page of the event</li>
+<li><a class="reference external" href="../../../../../../../../src/selenium/trackPage.js">trackPage.js</a> - Contains methods for testing of the tracks page of the event</li>
 </ul>
 <ol class="simple">
 <li>Overview Site</li>
@@ -208,27 +205,27 @@
 <span id="installation-deployment-of-the-web-app-generator"></span><h2>Installation/Deployment of the Web App Generator<a class="headerlink" href="#installation-deployment-of-the-web-app-generator" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="how-do-i-install-web-app-generator-on-a-server">
 <span id="how-do-i-install-web-app-generator-on-a-server"></span><h3>How do I install Web App Generator on a Server<a class="headerlink" href="#how-do-i-install-web-app-generator-on-a-server" title="Permalink to this headline">¶</a></h3>
-<p>Please check out <a class="reference external" href="../../../../../docs/INSTALLATION.md">the documentation here</a>.</p>
+<p>Please check out <a class="reference external" href="../../../../../../../../docs/INSTALLATION.md">the documentation here</a>.</p>
 </div>
 <div class="section" id="how-do-i-install-web-app-generator-on-my-local-machine">
 <span id="how-do-i-install-web-app-generator-on-my-local-machine"></span><h3>How do I install Web App Generator on my local machine<a class="headerlink" href="#how-do-i-install-web-app-generator-on-my-local-machine" title="Permalink to this headline">¶</a></h3>
-<p>Please check out <a class="reference external" href="../../../../../docs/INSTALLATION_LOCAL.md">the documentation here</a>.</p>
+<p>Please check out <a class="reference external" href="../../../../../../../../docs/INSTALLATION_LOCAL.md">the documentation here</a>.</p>
 </div>
 <div class="section" id="how-do-i-install-web-app-generator-on-google-cloud">
 <span id="how-do-i-install-web-app-generator-on-google-cloud"></span><h3>How do I install Web App Generator on Google Cloud<a class="headerlink" href="#how-do-i-install-web-app-generator-on-google-cloud" title="Permalink to this headline">¶</a></h3>
-<p>To install the system on Google Cloud please refer to the <a class="reference external" href="../../../../../docs/INSTALLATION_GOOGLE.md">Google Cloud installation readme</a>.</p>
+<p>To install the system on Google Cloud please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_GOOGLE.md">Google Cloud installation readme</a>.</p>
 </div>
 <div class="section" id="how-do-i-install-web-app-generator-on-aws">
 <span id="how-do-i-install-web-app-generator-on-aws"></span><h3>How do I install Web App Generator on AWS<a class="headerlink" href="#how-do-i-install-web-app-generator-on-aws" title="Permalink to this headline">¶</a></h3>
-<p>To install the system on AWS please refer to the <a class="reference external" href="../../../../../docs/INSTALLATION_AWS.md">AWS installation readme</a>.</p>
+<p>To install the system on AWS please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_AWS.md">AWS installation readme</a>.</p>
 </div>
 <div class="section" id="how-do-i-install-web-app-generator-on-digital-ocean">
 <span id="how-do-i-install-web-app-generator-on-digital-ocean"></span><h3>How do I install Web App Generator on Digital Ocean<a class="headerlink" href="#how-do-i-install-web-app-generator-on-digital-ocean" title="Permalink to this headline">¶</a></h3>
-<p>To install the system on Digital Ocean please refer to the <a class="reference external" href="../../../../../docs/INSTALLATION_DIGITALOCEAN.md">Digital Ocean installation readme</a>.</p>
+<p>To install the system on Digital Ocean please refer to the <a class="reference external" href="../../../../../../../../docs/INSTALLATION_DIGITALOCEAN.md">Digital Ocean installation readme</a>.</p>
 </div>
 <div class="section" id="how-do-i-deploy-web-app-generator-with-heroku">
 <span id="how-do-i-deploy-web-app-generator-with-heroku"></span><h3>How do I deploy Web App Generator with Heroku<a class="headerlink" href="#how-do-i-deploy-web-app-generator-with-heroku" title="Permalink to this headline">¶</a></h3>
-<p>Please read how to deploy to <a class="reference external" href="../../../../../docs/INSTALLATION_HEROKU.md">Heroku here</a>Or use the 1-click deployment button<a class="reference external" href="https://heroku.com/deploy?template=https://github.com/fossasia/open-event-webapp/tree/development"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
+<p>Please read how to deploy to <a class="reference external" href="../../../../../../../../docs/INSTALLATION_HEROKU.md">Heroku here</a>Or use the 1-click deployment button<a class="reference external" href="https://heroku.com/deploy?template=https://github.com/fossasia/open-event-webapp/tree/development"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
 </div>
 </div>
 </div>
@@ -262,7 +259,7 @@
 </div>
 <div class="section" id="configurations">
 <span id="configurations"></span><h1>Configurations<a class="headerlink" href="#configurations" title="Permalink to this headline">¶</a></h1>
-<p>All configurations are saved in the <a class="reference external" href="../../../../../config.json">config.js</a> file.</p>
+<p>All configurations are saved in the <a class="reference external" href="../../../../../../../../config.json">config.js</a> file.</p>
 <p>NOTE: In this document all <code class="docutils literal"><span class="pre">config.&lt;obj&gt;</span></code> variables refer to the data in the <em>config.json</em> file.</p>
 <div class="section" id="server-configs">
 <span id="server-configs"></span><h2>Server Configs<a class="headerlink" href="#server-configs" title="Permalink to this headline">¶</a></h2>
