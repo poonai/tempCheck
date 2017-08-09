@@ -15,7 +15,7 @@ Please join our mailing list to discuss questions regarding the project: https:/
 
 Our chat channel is on gitter here: https://gitter.im/fossasia/open-event-webapp
 
-## 1. Event Website Outp
+## 1. Event Website Out
 
 The component that is generated from the web app is the event website. Several sample event sites using the [sample from the open-event repo](https://github.com/fossasia/open-event/tree/master/sample) were generated, showcased on the main index page and added to this repo as a Github Pages site. You can have a look at showcase page on http://fossasia.github.io/open-event-webapp/ We also have a custom domain at http://sched.eventyay.com to which the former link is redirected.
 
