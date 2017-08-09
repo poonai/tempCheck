@@ -1,7 +1,20 @@
 .. mdinclude:: ../README.md
 
+Contents
+========
+
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
 
    demo
+
+Sub Projects
+============
+
+Stockiumai
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   StockiumAI/docs/index
