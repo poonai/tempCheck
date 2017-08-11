@@ -18,11 +18,3 @@ Stockiumai
    :maxdepth: 1
 
    StockiumAI/docs/index
-
-Stockiumbot
------------
-
-.. toctree::
-   :maxdepth: 1
-
-   StockiumBot/docs/index
