@@ -19,7 +19,7 @@
  Click [here](http://www.sphinx-doc.org/en/stable/theming.html#builtin-themes) to see a list of builtin themes.
  You can also specify any custom themes available on pypi.
 
- your git url should look like this
+ your git url should look like thi
   ```shell
   https://<username>:<token>@github.com/<organisation or username>/<repname>
   ```
