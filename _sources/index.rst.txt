@@ -7,14 +7,3 @@ Contents
    :maxdepth: 1
 
    demo
-
-Sub Projects
-============
-
-Stockiumai
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   StockiumAI/docs/index
