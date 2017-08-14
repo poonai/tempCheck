@@ -14,7 +14,7 @@
      6) DOCURL      (custom url at which site should be published.
                      If it is not set then default gh-pages url is used which is of the format
                      <username or organization>.github.io/<reponame>)
-     7) DOCTHEME    (name of the theme, default alabaster)
+     7) DOCTHEM    (name of the theme, default alabaster)
 
  Click [here](http://www.sphinx-doc.org/en/stable/theming.html#builtin-themes) to see a list of builtin themes.
  You can also specify any custom themes available on pypi.
