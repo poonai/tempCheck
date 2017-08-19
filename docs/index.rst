@@ -1,2 +1,2 @@
 
-.. feed:: http://blog.fossasia.org/feed
+.. feed:: https://www.jpl.nasa.gov/multimedia/rss/news.xml
