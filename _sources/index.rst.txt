@@ -1,2 +1,9 @@
+.. mdinclude:: ../README.md
 
-.. feed:: http://blog.fossasia.org/feed
+Contents
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   demo
